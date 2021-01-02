@@ -62,9 +62,6 @@
     "suggest": {
         "hwi/oauth-bundle": "For OAuth integration"
     },
-    "config": {
-        "bin-dir": "bin"
-    },
     "extra": {
         "branch-alias": {
             "dev-master": "1.9-dev"
@@ -86,12 +83,6 @@
             "Tests/Functional/app/AppKernel.php"
         ]
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../../*/*"
-        }
-    ],
     "minimum-stability": "dev",
     "prefer-stable": true
 }
