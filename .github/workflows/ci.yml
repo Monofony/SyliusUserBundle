@@ -30,9 +30,6 @@ jobs:
                     -
                         php: 7.3
                         symfony: ${SYMFONY_LATEST}
-                    -
-                        php: 8.0
-                        symfony: ${SYMFONY_LATEST}
 
         steps:
             -   uses: actions/checkout@v2
