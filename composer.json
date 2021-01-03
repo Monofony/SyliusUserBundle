@@ -1,5 +1,5 @@
 {
-    "name": "sylius/user-bundle",
+    "name": "monofony/user-bundle",
     "type": "symfony-bundle",
     "description": "Users management for Symfony projects.",
     "keywords": [
