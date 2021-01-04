@@ -126,7 +126,6 @@ final class UpdateUserEncoderListenerSpec extends ObjectBehavior
 
     function it_does_nothing_if_resolved_plain_password_is_empty(
         ObjectManager $objectManager,
-        InteractiveLoginEvent $event,
         TokenInterface $token,
         FixtureUser $user
     ): void {
