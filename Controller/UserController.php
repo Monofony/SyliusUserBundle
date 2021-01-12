@@ -349,12 +349,12 @@ class UserController extends ResourceController
         $user->setPlainPassword($newPassword);
 
         $dispatcher = $this->container->get('event_dispatcher');
-        $dispatcher->dispatch(UserEvents::PRE_PASSWORD_CHANGE, new GenericEvent($user));
+        $dispatcher->dispatch(new GenericEvent($user), UserEvents::PRE_PASSWORD_CHANGE);
 
         $this->manager->flush();
         $this->addTranslatedFlash('success', 'sylius.user.change_password');
 
-        $dispatcher->dispatch(UserEvents::POST_PASSWORD_CHANGE, new GenericEvent($user));
+        $dispatcher->dispatch(new GenericEvent($user), UserEvents::POST_PASSWORD_CHANGE);
 
         if (!$configuration->isHtmlRequest()) {
             return $this->viewHandler->handle($configuration, View::create(null, Response::HTTP_NO_CONTENT));
